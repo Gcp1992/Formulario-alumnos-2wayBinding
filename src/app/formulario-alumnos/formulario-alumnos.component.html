@@ -1,0 +1,17 @@
+<h1>Formulario de Alumnos</h1>
+
+<label for="id_alumno">Id alumno: </label> <input type="text" [(ngModel)]="id"> <br><br>
+<label for="nombre">Nombre: </label> <input type="text" [(ngModel)]="nombre"> <br><br>
+<label for="dni">DNI: </label> <input type="text" [(ngModel)]="dni"><br><br>
+<label for="horas_formacion">Horas de formación: </label> <input type="number" [(ngModel)]="horas_formacion"><br><br>
+
+<input type="button" value="Introducir alumno" (click)="introducirEmpleado()">
+
+
+<div *ngFor="let iterador of alumnos; let i=index">
+  <p>Alumno {{i+1}}</p>
+  <p>Id alumno: {{i+1}}</p>
+  <p>Nombre: {{nombre}}</p>
+  <p>DNI: {{dni}}</p>
+  <p>Horas formación: {{horas_formacion}}</p>
+</div>
